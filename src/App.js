@@ -1,21 +1,22 @@
-function App() {
+import React from 'react'
+import { connect } from 'react-redux'
+
+const Page = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div> App funcionando </div>
+  )
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    user:state.user
+  }
+}
+
+const mapDispatchToProps = (disptch) => {
+  return {
+    
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Page)
