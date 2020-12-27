@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 
 import { Template } from './components/MainComponents'
+import Header from './components/partials/Header/Header'
+import Footer from './components/partials/Footer/Footer'
 
 import Routes from './Routes'
 
@@ -11,7 +13,9 @@ const Page = (props) => {
   return (
     <BrowserRouter>  
       <Template>
+        <Header />
         <Routes />
+        <Footer />
       </Template>
     </BrowserRouter>
   )
