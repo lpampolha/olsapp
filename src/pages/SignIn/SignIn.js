@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { SignInStyle } from './styled'
-import connectAPI from '../../helpers/connectAPI'
+import ConnectAPI from '../../helpers/ConnectAPI'
 import { doLogin } from '../../helpers/AuthHendler'
 import { PageContainer, PageTitle, ErrorMessage } from '../../components/MainComponents'
 
 const SignIn = () => {
 
-    const api = connectAPI()
+    const api = ConnectAPI()
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')

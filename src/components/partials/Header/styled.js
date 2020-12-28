@@ -53,10 +53,14 @@ export const HeaderStyled = styled.div`
             margin-left:20px;
             mergin-right:20px;
 
-            a{
+            a, button{
+                border:0;
+                background:none;
+                cursor:pointer;
                 color:#000;
                 font-size:14px;
                 text-decoration:none;
+                outline:0;
 
                 &:hover{
                     color:#999;
