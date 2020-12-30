@@ -4,6 +4,7 @@ import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import NotFound from './pages/NotFound/NotFound'
 import SignIn from './pages/SignIn/SignIn'
+import SignUp from './pages/SignUp/SignUp'
 
 
 export default () => {
@@ -17,6 +18,9 @@ export default () => {
             </Route>
             <Route exact path='/signin'>
                 <SignIn />
+            </Route>
+            <Route exact path='/signup'>
+                <SignUp />
             </Route>
             <Route>
                 <NotFound />

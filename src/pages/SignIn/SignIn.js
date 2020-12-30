@@ -17,6 +17,7 @@ const SignIn = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         setDisabled(true)
+        setError('')
 
         const json = await api.login(email, password)
 
@@ -24,6 +25,7 @@ const SignIn = () => {
             setError(json.error)
         }else{
             doLogin(json.token, rememberPassword)
+            //doLogin(json.token)
             window.location.href = "/"
         }
         setDisabled(false)

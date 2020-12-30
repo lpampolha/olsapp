@@ -65,9 +65,9 @@ const ConnectAPI = {
 
     getStates:async () => {
         const json = await apiFetchGet(
-            '/states'
-        );
-        return json.states;
+            '/state'
+        )
+        return json.state
     }
 
 };
