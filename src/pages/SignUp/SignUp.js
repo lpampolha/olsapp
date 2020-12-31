@@ -69,7 +69,7 @@ const SignUp = () => {
                             />
                         </div>
                     </label>
-                    {/* <label className="area">
+                    <label className="area">
                         <div className="area-title">Estado</div>
                         <div className="area-input">
                             <select value={stateLoc} onChange={e=>setStateLoc(e.target.value)} required>
@@ -78,7 +78,7 @@ const SignUp = () => {
                                 )}
                             </select>
                         </div>
-                    </label> */}
+                    </label>
                     <label className="area">
                         <div className="area-title">E-mail</div>
                         <div className="area-input">

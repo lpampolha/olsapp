@@ -1,7 +1,8 @@
 import Cookies from 'js-cookie';
 import qs from 'qs';
 
-const BASEAPI = 'http://localhost:3001';
+//const BASEAPI = 'http://localhost:3001';
+const BASEAPI = 'https://olsapi.herokuapp.com'
 
 const apiFetchPost = async (endpoint, body) => {
     if(!body.token) {
@@ -68,6 +69,13 @@ const ConnectAPI = {
             '/state'
         )
         return json.state
+    },
+
+    getCategories:async () => {
+        const json = await apiFetchGet(
+            '/categories'
+        )
+        return json.categories
     }
 
 };

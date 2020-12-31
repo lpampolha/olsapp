@@ -10,7 +10,7 @@ const SignIn = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [rememberPassword, setRemeberPassword] = useState(false)
+    const [rememberPassword, setRemeberPassword] = useState(true)
     const [disabled, setDisabled] = useState(false)
     const [error, setError] = useState('')
 
@@ -55,12 +55,12 @@ const SignIn = () => {
                         </div>
                     </label>
 
-                    <label className="area">
+                    {/* <label className="area">
                         <div className="area-title">Lembrar senha</div>
                         <div className="area-input">
                             <input type="checkbox" disabled={disabled} checked={rememberPassword} onChange={()=>setRemeberPassword(!rememberPassword)} />
                         </div>
-                    </label>
+                    </label> */}
 
                     <label className="area">
                         <div className="area-title"></div>
