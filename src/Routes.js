@@ -1,10 +1,10 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import Home from './pages/Home/Home'
-import About from './pages/About/About'
-import NotFound from './pages/NotFound/NotFound'
-import SignIn from './pages/SignIn/SignIn'
-import SignUp from './pages/SignUp/SignUp'
+import { Switch, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import NotFound from './pages/NotFound'
+import SignIn from './pages/SignIn'
+import SignUp from './pages/SignUp'
 
 
 export default () => {

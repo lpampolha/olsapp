@@ -66,9 +66,9 @@ const ConnectAPI = {
 
     getStates:async () => {
         const json = await apiFetchGet(
-            '/state'
+            '/states'
         )
-        return json.state
+        return json.states
     },
 
     getCategories:async () => {
