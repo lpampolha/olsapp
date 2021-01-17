@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom'
-import { HeaderStyled } from './styled'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { HeaderStyled } from './styled';
 
-import { isLogged, doLogout } from '../../../helpers/AuthHendler'
+import { isLogged, doLogout } from '../../../helpers/AuthHendler';
 
 const Header = () => {
-
-    let logged = isLogged()
+    let logged = isLogged();
 
     const handleLogout = () => {
-        doLogout()
-        window.location.href='/'
+        doLogout();
+        window.location.href = '/';
     }
 
     return (
@@ -22,7 +22,6 @@ const Header = () => {
                         <span className="logo-3">S</span>
                     </Link>
                 </div>
-
                 <nav>
                     <ul>
                         {logged &&
@@ -32,13 +31,12 @@ const Header = () => {
                                 </li>
                                 <li>
                                     <button onClick={handleLogout}>Sair</button>
-                                </li>                            
+                                </li>
                                 <li>
-                                    <Link to="/post-an-ad" className="button">Anuncie Aqui!</Link>
+                                    <Link to="/post-an-ad" className="button">Poste um anúncio</Link>
                                 </li>
                             </>
                         }
-
                         {!logged &&
                             <>
                                 <li>
@@ -48,16 +46,15 @@ const Header = () => {
                                     <Link to="/signup">Cadastrar</Link>
                                 </li>
                                 <li>
-                                    <Link to="/signin" className="button">Anuncie Aqui!</Link>
+                                    <Link to="/signin" className="button">Poste um anúncio</Link>
                                 </li>
-
                             </>
                         }
                     </ul>
                 </nav>
             </div>
         </HeaderStyled>
-    )
+    );
 }
 
-export default Header
+export default Header;

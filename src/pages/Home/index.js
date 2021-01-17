@@ -44,14 +44,14 @@ const Home = () => {
                         </form>
                     </div>
                     
-                    {/* <div className="categoriesList">
+                    <div className="categoriesList">
                         {categoriesList.map((i,k)=>
                             <Link key={k} to={`/categories=${i.slug}`} className="categoriesList">
                                 <img src={i.icon} alt="" />
                                 <span>{i.name}</span>
                             </Link>    
                         )}
-                    </div> */}
+                    </div>
                 </PageContainer>
             </SearchArea>
             

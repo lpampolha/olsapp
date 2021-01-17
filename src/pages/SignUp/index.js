@@ -37,12 +37,12 @@ const SignUp = () => {
 
         const json = await api.register(name, email, password, stateLoc);
 
-        if(json.error) {
-            setError(json.error);
-        } else {
-            doLogin(json.token);
-            window.location.href = '/';
-        }
+        // if(json.error) {
+        //     setError(json.error);
+        // } else {
+        //     doLogin(json.token);
+        //     window.location.href = '/';
+        // }
 
         setDisabled(false);
     }

@@ -5,8 +5,8 @@ import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 
 import { Template } from './components/MainComponents'
-import Header from './components/partials/Header/Header'
-import Footer from './components/partials/Footer/Footer'
+import Header from './components/partials/Header/index'
+import Footer from './components/partials/Footer/index'
 
 import Routes from './Routes'
 

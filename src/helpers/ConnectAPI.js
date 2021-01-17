@@ -50,7 +50,7 @@ const ConnectAPI = {
 
     login:async (email, password) => {
         const json = await apiFetchPost(
-            '/user',
+            '/user/signin',
             {email, password}
         );
         return json;
@@ -58,7 +58,7 @@ const ConnectAPI = {
 
     register:async (name, email, password, stateLoc) => {
         const json = await apiFetchPost(
-            '/signup',
+            '/user/signup',
             {name, email, password, state:stateLoc}
         );
         return json;
