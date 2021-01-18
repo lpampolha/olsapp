@@ -16,7 +16,7 @@ const Home = () => {
             let slist = await api.getStates()
             setStatesList(slist)
         }
-        getStates
+        getStates()
     }, [])
 
     useEffect(()=>{
@@ -44,9 +44,9 @@ const Home = () => {
                         </form>
                     </div>
                     
-                    <div className="categoriesList">
+                    <div className="categoryList">
                         {categoriesList.map((i,k)=>
-                            <Link key={k} to={`/categories=${i.slug}`} className="categoriesList">
+                            <Link key={k} to={`/ads?cat=${i.slug}`} className="categoryItem">
                                 <img src={i.icon} alt="" />
                                 <span>{i.name}</span>
                             </Link>    

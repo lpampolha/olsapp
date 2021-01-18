@@ -6,6 +6,32 @@ export const SearchArea = styled.div`
     border-botton:1px solid #ccc;
     padding:20px 0;
 
+    .categoryList{
+        display: flex;
+        flex-wrao: wrap;
+        margin-top: 20px;
+    }
+
+    .categoryItem{
+        width: 25%;
+        display: flex;
+        align-itens: center;
+        color: #000;
+        text-decoration: none;
+        height: 50px;
+        margin-botton: 10px;
+
+        &:hover{
+            color: #999;
+        }
+    }
+
+    img{
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+    }
+
     .searchBox{
         background-color:#9bb83c;
         padding:20px 15px;
