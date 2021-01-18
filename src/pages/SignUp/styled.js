@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const SignInStyle = styled.div`
+export const SignUpStyle = styled.div`
 
     background-color:#fff;
     border-radius:3px;
