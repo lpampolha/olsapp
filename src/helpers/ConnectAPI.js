@@ -92,8 +92,16 @@ const ConnectAPI = {
             {id, other}
         )
         return json
+    },
+
+    addAd:async (fData) => {
+        const json = await apiFetchFile(
+            '/ad/add',
+            fData
+        );
+        return json;
     }
 
-};
+}
 
 export default () => ConnectAPI

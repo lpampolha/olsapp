@@ -16,12 +16,23 @@ const Page = () => {
     useEffect(()=>{
         const getAdInfo = async (id) => {
             const json = await api.getAd(id, true)
-            console.log(json);
-            setAdInfo(json);
-            setLoading(false);
+            
+            setAdInfo(json)
+            console.log(json)
+            setLoading(false)
         }
         getAdInfo(id);
-    }, []);
+    }, [])
+
+    const formatDate = (date) => {
+        let cDate = new Date(date)
+        let months= ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+        let cDay = cDate.getDate()
+        let cMonth = cDate.getMonth()
+        let cYear = cDate.getFullYear()
+
+        return `${cDay} de ${months[cMonth]} de ${cYear}`
+    }
 
     return (
         <PageContainer>
@@ -37,6 +48,17 @@ const Page = () => {
                                 {loading && <Fake height={20}/>}
                                 {adInfo.title &&
                                     <h2>{adInfo.title}</h2>
+                                }
+                                {adInfo.dateCreated &&
+                                    <small>Criado em {formatDate(adInfo.dateCreated)}</small>
+                                }
+                            </div>
+                            <div className="adDescription">
+                                {loading && <Fake height={100} />}
+                                {adInfo.description}
+                                <hr/>
+                                {adInfo.views &&
+                                    <small>Visualizações: {adInfo.views}</small>
                                 }
                             </div>
                             <div className="adDescription">
