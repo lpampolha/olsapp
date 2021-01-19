@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { SearchArea, SignInStyle } from './styled'
 import ConnectAPI from '../../helpers/ConnectAPI'
 import { PageContainer } from '../../components/MainComponents'
+import AdItem from '../../components/partials/AdItem'
 
 const Home = () => {
 
@@ -69,7 +70,16 @@ const Home = () => {
             
             <PageContainer>
                 <SignInStyle>
-                    ...
+                    <h2>Anúncios Recentes</h2>
+                    <div className="list">
+                        {adList.map((i,k)=>
+                            <AdItem key={k} data={i} />
+                        )}
+                    </div>
+                    <Link to="/ads" className="seeAllLinks">Ver todos</Link>
+                    <hr />
+
+                    Loren Loren Loren Loren Loren Loren Loren Loren Loren Loren Loren Loren Loren Loren Loren 
                 </SignInStyle>
             </PageContainer>
         </>
