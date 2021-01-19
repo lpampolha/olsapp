@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 //import { Slide } from 'react-slideshow-image';
 import { PageArea, Fake } from './styled';
@@ -13,15 +13,15 @@ const Page = () => {
     const [loading, setLoading] = useState(true);
     const [adInfo, setAdInfo] = useState({});
 
-    // useEffect(()=>{
-    //     const getAdInfo = async (id) => {
-    //         const json = await api.getAd(id, true)
-    //         console.log(json);
-    //         setAdInfo(json);
-    //         setLoading(false);
-    //     }
-    //     getAdInfo(id);
-    // }, []);
+    useEffect(()=>{
+        const getAdInfo = async (id) => {
+            const json = await api.getAd(id, true)
+            console.log(json);
+            setAdInfo(json);
+            setLoading(false);
+        }
+        getAdInfo(id);
+    }, []);
 
     return (
         <PageContainer>
@@ -35,6 +35,9 @@ const Page = () => {
                         <div className="adInfo">
                             <div className="adName">
                                 {loading && <Fake height={20}/>}
+                                {adInfo.title &&
+                                    <h2>{adInfo.title}</h2>
+                                }
                             </div>
                             <div className="adDescription">
                                 {loading && <Fake height={100}/>}
