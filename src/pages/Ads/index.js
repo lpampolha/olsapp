@@ -150,7 +150,7 @@ const Page = () => {
                         <div className="listWarning">Carregando...</div>
                     }
                     {!loading && adList.length === 0 &&
-                        <div className="listWarning">Não encontramos resultados.</div>
+                        <div className="listWarning">Nenhum resultado encontrado.</div>
                     }
                     <div className="list" style={{opacity:resultOpacity}}>
                         {adList.map((i,k)=>

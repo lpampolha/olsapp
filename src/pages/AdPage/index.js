@@ -10,15 +10,14 @@ import AdItem from '../../components/partials/AdItem'
 const Page = () => {
     const api = useApi();
     const { id } = useParams();
+
     const [loading, setLoading] = useState(true);
-    const [adInfo, setAdInfo] = useState({});
+    const [adInfo, setAdInfo] = useState({})
 
     useEffect(()=>{
         const getAdInfo = async (id) => {
-            const json = await api.getAd(id, true)
-            
+            const json = await api.getAd(id, true);
             setAdInfo(json)
-            console.log(json)
             setLoading(false)
         }
         getAdInfo(id);

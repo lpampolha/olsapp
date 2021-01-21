@@ -6,29 +6,37 @@ import NotFound from './pages/NotFound'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import AdPage from './pages/AdPage'
-
+import AddAd from './pages/AddAd'
+import Ads from './pages/Ads'
+import RouteHendler from './components/RouteHandler'
 
 export default () => {
     return (
         <Switch>
-            <Route exact path='/'>
+            <RouteHendler exact path='/'>
                 <Home />
-            </Route>
-            <Route exact path='/sobre'>
+            </RouteHendler>
+            <RouteHendler exact path='/sobre'>
                 <About />
-            </Route>
-            <Route exact path='/signin'>
+            </RouteHendler>
+            <RouteHendler exact path='/signin'>
                 <SignIn />
-            </Route>
-            <Route exact path='/signup'>
+            </RouteHendler>
+            <RouteHendler exact path='/signup'>
                 <SignUp />
-            </Route>
-            <Route exact path='/ad/:id'>
+            </RouteHendler>
+            <RouteHendler exact path='/ad/:id'>
                 <AdPage />
-            </Route>
-            <Route>
+            </RouteHendler>
+            <RouteHendler private exact path='/post-an-ad'>
+                <AddAd />
+            </RouteHendler>
+            <RouteHendler exact path='/ads'>
+                <Ads />
+            </RouteHendler>
+            <RouteHendler>
                 <NotFound />
-            </Route>
+            </RouteHendler>
         </Switch>
     )
 }
