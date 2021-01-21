@@ -1,8 +1,8 @@
 import Cookies from 'js-cookie';
 import qs from 'qs';
 
-//const BASEAPI = 'http://localhost:3001';
-const BASEAPI = 'https://olsapi.herokuapp.com'
+const BASEAPI = 'http://localhost:3001';
+//const BASEAPI = 'https://olsapi.herokuapp.com'
 
 const apiFetchFile = async (endpoint, body) => {
     if(!body.token) {

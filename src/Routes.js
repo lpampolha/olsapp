@@ -9,6 +9,7 @@ import AdPage from './pages/AdPage'
 import AddAd from './pages/AddAd'
 import Ads from './pages/Ads'
 import RouteHendler from './components/RouteHandler'
+import Account from './pages/Account'
 
 export default () => {
     return (
@@ -24,6 +25,9 @@ export default () => {
             </RouteHendler>
             <RouteHendler exact path='/signup'>
                 <SignUp />
+            </RouteHendler>
+            <RouteHendler exact path='/my-account'>
+                <Account />
             </RouteHendler>
             <RouteHendler exact path='/ad/:id'>
                 <AdPage />
