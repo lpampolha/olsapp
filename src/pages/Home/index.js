@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { SearchArea, SignInStyle } from './styled'
+import { SignInStyle, SearchArea } from './styled'
+
 import ConnectAPI from '../../helpers/ConnectAPI'
+
 import { PageContainer } from '../../components/MainComponents'
 import AdItem from '../../components/partials/AdItem'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 
     const api = ConnectAPI()
 
     const [statesList, setStatesList] = useState([])
-    const [categoriesList, setCategoriesList] = useState([])
+    const [categories, setCategories] = useState([])
     const [adList, setAdList] = useState([])
 
     useEffect(()=>{
@@ -19,12 +21,13 @@ const Home = () => {
             setStatesList(slist)
         }
         getStates()
-    }, [])
+    }, [api])
 
     useEffect(()=>{
         let getCategories = async () => {
             let cats = await api.getCategories();
-            setCategoriesList(cats);
+            setCategories(cats);
+            console.log(cats)
         }
         getCategories();
     }, [])
@@ -58,9 +61,9 @@ const Home = () => {
                     </div>
                     
                     <div className="categoryList">
-                        {categoriesList.map((i,k)=>
+                        {categories.map((i,k)=>
                             <Link key={k} to={`/ads?cat=${i.slug}`} className="categoryItem">
-                                <img src={i.icon} alt="" />
+                                <img src={i.img} alt="" />
                                 <span>{i.name}</span>
                             </Link>    
                         )}

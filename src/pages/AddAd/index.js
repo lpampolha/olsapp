@@ -59,7 +59,7 @@ const Page = () => {
                 }
             }
 
-            const json = await api.addAd(fData);
+            const json = await api.getUser(fData);
 
             if(!json.error) {
                 history.push(`/ad/${json.id}`);

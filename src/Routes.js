@@ -9,7 +9,7 @@ import AdPage from './pages/AdPage'
 import AddAd from './pages/AddAd'
 import Ads from './pages/Ads'
 import RouteHendler from './components/RouteHandler'
-import Account from './pages/Account'
+import Account from './pages/MyAccount'
 
 export default () => {
     return (
